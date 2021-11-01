@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig.json to read more about this file */
+        "target": "es6",
+        "types": ["node"],
+        "sourceMap": true,
+        "rootDir": "./src",
+        "outDir": "./js",
+        "watch": true,
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "experimentalDecorators": true
+    },
+    "include": ["./src/**/*"]
+}
