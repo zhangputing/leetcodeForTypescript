@@ -5,7 +5,7 @@ import "./TestCase";
 class DistributeCandies extends FuncBase<number, number[]> {
     private _candyMap: Record<number, boolean> = {};
     private _res = 0;
-    @CodeMap.registerFunc("DistributeCandies", true)
+    @CodeMap.registerFunc("DistributeCandies")
     public testFunc(para: number[]): number {
         this._traverseNumber(para);
         return this._res;
