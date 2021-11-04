@@ -2,7 +2,7 @@ export abstract class FuncBase<IAnswerType, IParameterType> {
     public abstract testFunc(para: IParameterType): IAnswerType;
 }
 
-export abstract class TestBase<IAnswerType, IParameterType> {
+export abstract class TestBase<IParameterType, IAnswerType> {
     public abstract getFuncName(): string;
 }
 

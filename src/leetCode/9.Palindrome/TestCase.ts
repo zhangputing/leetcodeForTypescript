@@ -16,7 +16,6 @@ class TestCase extends TestBase<number, boolean> {
         return [454, true];
     }
 
-    @CodeMap.Debug()
     @CodeMap.registerCase()
     private case3(): [number, boolean] {
         return [45678, false];
