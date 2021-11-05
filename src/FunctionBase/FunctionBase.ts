@@ -1,5 +1,5 @@
 export abstract class FuncBase<IAnswerType, IParameterType> {
-    public abstract testFunc(para: IParameterType): IAnswerType;
+    public abstract testFunc(...para: IParameterType[]): IAnswerType;
 }
 
 export abstract class TestBase<IParameterType, IAnswerType> {

@@ -18,7 +18,7 @@ class StringToInteger extends FuncBase<number, string> {
     private _res: number[] = [];
     private _operator = 1;
 
-    @CodeMap.registerFunc("StringToInteger", true)
+    @CodeMap.registerFunc("StringToInteger")
     public testFunc(para: string): number {
         this._parseString(para.trim());
         return this._fixNumber();

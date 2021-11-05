@@ -1,7 +1,7 @@
 import { TestBaseMode } from "../FunctionBase/FunctionBase";
 
-type ParameterType = number;
-type AnswerType = number | boolean;
+type ParameterType = number | string | number[] | boolean | string[] | boolean[];
+type AnswerType = ParameterType;
 
 export interface IFuncType {
     testFunc: Function;
@@ -9,7 +9,7 @@ export interface IFuncType {
 }
 
 export interface IParameterType {
-    para: ParameterType;
+    para: ParameterType[];
     expected: AnswerType;
     caseName: string;
 }
@@ -47,7 +47,7 @@ export class CodeMap {
         return function (target: TestBaseMode, methodName: string, descriptor: PropertyDescriptor) {
             const name = target.getFuncName();
             CodeMap._initDebugCaseByName(name);
-            const [para, expected] = descriptor.value();
+            const [para, expected]: [ParameterType[], AnswerType] = descriptor.value();
             CodeMap.DebugCaseMap[name].push({ para: para, caseName: methodName, expected: expected });
         };
     }

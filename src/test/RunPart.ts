@@ -12,7 +12,7 @@ export class RunPart {
         const funcMap = RunPart._getFuncMap();
         const func = funcMap[name].testFunc;
         const construct = funcMap[name].construct;
-        const answer = func.bind(new construct.constructor())(parameter.para);
+        const answer = func.bind(new construct.constructor())(...parameter.para);
         console.log(`${parameter.caseName}:`);
         console.log("parameter: ", parameter.para, answer, parameter.expected);
         console.log("answer: ", answer);
