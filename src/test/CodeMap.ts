@@ -1,5 +1,4 @@
 import { TestBaseMode } from "../FunctionBase/FunctionBase";
-
 type ParameterType = number | string | number[] | boolean | string[] | boolean[];
 type AnswerType = ParameterType;
 
@@ -103,3 +102,7 @@ export class CodeMap {
         CodeMap.CodeMap = {};
     }
 }
+
+export const Debug = CodeMap.Debug;
+export const Case = CodeMap.registerCase;
+export const Func = CodeMap.registerFunc;

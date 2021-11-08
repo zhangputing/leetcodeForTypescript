@@ -13,15 +13,15 @@ LeetCode提交仅需将新建一个函数对象调用。
 ## 测试
 测试代码，测试用例需要在entry注册
 
-@CodeMap.registerCase()
+@Case()
 
 注册测试用例
 
-@CodeMap.Debug()
+@Debug()
 
 调试单一用例
 
-@CodeMap.registerFunc(name: string, debug?: boolean)
+@Func(name: string, debug?: boolean)
 
 注册函数，name：题目名称，debug：调试单一题目
 

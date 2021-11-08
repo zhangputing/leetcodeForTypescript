@@ -1,9 +1,9 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Func } from "../../test/CodeMap";
 import "./TestCase";
 
 class Palindrome extends FuncBase<boolean, number> {
-    @CodeMap.registerFunc("Palindrome")
+    @Func("Palindrome")
     public testFunc(para: number): boolean {
         const numbers: number[] = this._sliceNumber(para);
         return this._isPalindrome(numbers);

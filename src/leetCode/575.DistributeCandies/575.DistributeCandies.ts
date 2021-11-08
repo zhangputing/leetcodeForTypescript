@@ -1,11 +1,11 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Func } from "../../test/CodeMap";
 import "./TestCase";
 
 class DistributeCandies extends FuncBase<number, number[]> {
     private _candyMap: Record<number, boolean> = {};
     private _res = 0;
-    @CodeMap.registerFunc("DistributeCandies")
+    @Func("DistributeCandies")
     public testFunc(para: number[]): number {
         this._traverseNumber(para);
         return this._res;

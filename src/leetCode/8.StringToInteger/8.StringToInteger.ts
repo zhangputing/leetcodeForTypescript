@@ -1,5 +1,5 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Func } from "../../test/CodeMap";
 import "./TestCase";
 const MaxNumber = 2147483648;
 class StringToInteger extends FuncBase<number, string> {
@@ -18,7 +18,7 @@ class StringToInteger extends FuncBase<number, string> {
     private _res: number[] = [];
     private _operator = 1;
 
-    @CodeMap.registerFunc("StringToInteger")
+    @Func("StringToInteger")
     public testFunc(para: string): number {
         this._parseString(para.trim());
         return this._fixNumber();

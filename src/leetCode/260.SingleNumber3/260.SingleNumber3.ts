@@ -1,10 +1,10 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Func } from "../../test/CodeMap";
 import "./TestCase";
 
 class SingleNumber3 extends FuncBase<number[], number[]> {
     private _numbers: Record<number, boolean> = {};
-    @CodeMap.registerFunc("SingleNumber3")
+    @Func("SingleNumber3")
     public testFunc(para: number[]): number[] {
         this._initPara(para);
         return this._getRes();

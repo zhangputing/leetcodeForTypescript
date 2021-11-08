@@ -1,5 +1,5 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Func } from "../../test/CodeMap";
 import "./TestCase";
 class LongestArithmeticSubsequence extends FuncBase<number, number[] | number> {
     private _hasChecked: Record<number, boolean> = {};
@@ -7,7 +7,7 @@ class LongestArithmeticSubsequence extends FuncBase<number, number[] | number> {
     private _sum: number = 0;
     private _res: number = 0;
     private _currentIndex: number = -1;
-    @CodeMap.registerFunc("LongestArithmeticSubsequence", true)
+    @Func("LongestArithmeticSubsequence")
     public testFunc(arr: number[], difference: number): number {
         this._initArrayMap(arr);
         this._queryAllNumber(arr, difference);

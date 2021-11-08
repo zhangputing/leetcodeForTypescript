@@ -1,27 +1,27 @@
 import { TestBase } from "../../FunctionBase/FunctionBase";
-import { CodeMap } from "../../test/CodeMap";
+import { Case } from "../../test/CodeMap";
 
 class TestCase extends TestBase<[number], boolean> {
     public getFuncName(): string {
         return "Palindrome";
     }
 
-    @CodeMap.registerCase()
+    @Case()
     private case1(): [[number], boolean] {
         return [[456], false];
     }
 
-    @CodeMap.registerCase()
+    @Case()
     private case2(): [[number], boolean] {
         return [[454], true];
     }
 
-    @CodeMap.registerCase()
+    @Case()
     private case3(): [[number], boolean] {
         return [[45678], false];
     }
 
-    @CodeMap.registerCase()
+    @Case()
     private case4(): [[number], boolean] {
         return [[8456548], true];
     }
