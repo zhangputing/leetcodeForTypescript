@@ -17,7 +17,6 @@ export class RunPart {
         const construct = funcMap[name].construct;
         const answer: AnswerType = func.bind(new construct.constructor())(...parameter.para);
         RunPart._log.printLogByAnswer(parameter, answer);
-        RunPart._log._printLog(`${parameter.caseName}:`);
     }
 
     private static _runOneFunc(name: string) {

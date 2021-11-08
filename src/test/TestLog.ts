@@ -1,3 +1,4 @@
+import assert from "assert";
 import { IParameterType, AnswerType } from "./CodeMap";
 
 export class TestLog {
@@ -11,9 +12,17 @@ export class TestLog {
 
     public printLogByAnswer(parameter: IParameterType, answer: AnswerType) {
         if (this._isDebugMode) {
+            console.log(`${parameter.caseName}:`);
             console.log("parameter: ", parameter.para, answer, parameter.expected);
             console.log("answer: ", answer);
             console.log("expected: ", parameter.expected);
+        } else {
+            try {
+                assert.deepEqual(answer, parameter.expected);
+                console.log(`${parameter.caseName}:`, true);
+            } catch (e) {
+                console.log(`${parameter.caseName}:`, false);
+            }
         }
     }
 
