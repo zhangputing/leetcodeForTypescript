@@ -1,6 +1,6 @@
 import { TestBaseMode } from "../FunctionBase/FunctionBase";
 type ParameterType = number | string | number[] | boolean | string[] | boolean[];
-type AnswerType = ParameterType;
+export type AnswerType = ParameterType;
 
 export interface IFuncType {
     testFunc: Function;

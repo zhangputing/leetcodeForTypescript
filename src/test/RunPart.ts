@@ -1,7 +1,10 @@
-import { CodeMap, IFuncType, IParameterType } from "./CodeMap";
+import { AnswerType, CodeMap, IFuncType, IParameterType } from "./CodeMap";
+import { TestLog } from "./TestLog";
 
 export class RunPart {
+    private static _log: TestLog;
     public static run() {
+        RunPart._log = new TestLog();
         const funcMap = RunPart._getFuncMap();
         for (const name in funcMap) {
             RunPart._runOneFunc(name);
@@ -12,15 +15,13 @@ export class RunPart {
         const funcMap = RunPart._getFuncMap();
         const func = funcMap[name].testFunc;
         const construct = funcMap[name].construct;
-        const answer = func.bind(new construct.constructor())(...parameter.para);
-        console.log(`${parameter.caseName}:`);
-        console.log("parameter: ", parameter.para, answer, parameter.expected);
-        console.log("answer: ", answer);
-        console.log("expected: ", parameter.expected);
+        const answer: AnswerType = func.bind(new construct.constructor())(...parameter.para);
+        RunPart._log.printLogByAnswer(parameter, answer);
+        RunPart._log._printLog(`${parameter.caseName}:`);
     }
 
     private static _runOneFunc(name: string) {
-        RunPart._printSplitLine();
+        RunPart._log._printSplitLine();
         console.log(name);
         const parameters = RunPart._getCase(name);
         try {
@@ -33,14 +34,12 @@ export class RunPart {
         }
     }
 
-    private static _printSplitLine() {
-        console.log("------------------------------------");
-    }
-
     private static _getFuncMap(): Record<string, IFuncType> {
         if (CodeMap._hasDebug()) {
+            RunPart._log.isDebugMode = true;
             return CodeMap.DebugMap;
         } else {
+            RunPart._log.isDebugMode = false;
             return CodeMap.CodeMap;
         }
     }
