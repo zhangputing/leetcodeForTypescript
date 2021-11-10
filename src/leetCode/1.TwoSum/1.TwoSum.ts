@@ -1,7 +1,7 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
 import { Func } from "../../test/CodeMap";
 import "./TestCase";
-class TowSum extends FuncBase<number[], number[] | number> {
+class TowSum extends FuncBase<number[] | number, number[]> {
     private _map: NumberMap = new NumberMap();
     private _res: number[] = [];
     @Func("TowSum")

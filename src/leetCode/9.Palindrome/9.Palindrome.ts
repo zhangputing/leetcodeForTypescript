@@ -2,7 +2,7 @@ import { FuncBase } from "../../FunctionBase/FunctionBase";
 import { Func } from "../../test/CodeMap";
 import "./TestCase";
 
-class Palindrome extends FuncBase<boolean, number> {
+class Palindrome extends FuncBase<number, boolean> {
     @Func("Palindrome")
     public testFunc(para: number): boolean {
         const numbers: number[] = this._sliceNumber(para);

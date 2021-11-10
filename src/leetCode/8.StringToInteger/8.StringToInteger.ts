@@ -2,7 +2,7 @@ import { FuncBase } from "../../FunctionBase/FunctionBase";
 import { Func } from "../../test/CodeMap";
 import "./TestCase";
 const MaxNumber = 2147483648;
-class StringToInteger extends FuncBase<number, string> {
+class StringToInteger extends FuncBase<string, number> {
     private static numberMap: Record<string, boolean> = {
         "0": true,
         "1": true,

@@ -1,4 +1,4 @@
-export abstract class FuncBase<IAnswerType, IParameterType> {
+export abstract class FuncBase<IParameterType, IAnswerType> {
     public abstract testFunc(...para: IParameterType[]): IAnswerType;
 }
 

@@ -2,7 +2,7 @@ import { FuncBase } from "../../FunctionBase/FunctionBase";
 import { Func } from "../../test/CodeMap";
 import "./TestCase";
 
-class DistributeCandies extends FuncBase<number, number[]> {
+class DistributeCandies extends FuncBase<number[], number> {
     private _candyMap: Record<number, boolean> = {};
     private _res = 0;
     @Func("DistributeCandies")

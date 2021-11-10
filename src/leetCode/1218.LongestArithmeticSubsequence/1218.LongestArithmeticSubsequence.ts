@@ -1,7 +1,7 @@
 import { FuncBase } from "../../FunctionBase/FunctionBase";
 import { Func } from "../../test/CodeMap";
 import "./TestCase";
-class LongestArithmeticSubsequence extends FuncBase<number, number[] | number> {
+class LongestArithmeticSubsequence extends FuncBase<number[] | number, number> {
     private _hasChecked: Record<number, boolean> = {};
     private _arrMap: ArrMap = new ArrMap();
     private _sum: number = 0;
