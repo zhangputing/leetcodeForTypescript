@@ -1,6 +1,8 @@
 # Read ME
 为了在LeetCode中更好地使用TypeScript，进行编程题目的训练
 
+https://blog.csdn.net/qq_34426641/article/details/121300852
+
 ## 题目 
 所有题目均在 src/leetCode
 
